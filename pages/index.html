@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link href="https://fonts.cdnfonts.com/css/common-pixel?styles=9199" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background">
+
+    </div>
+
+    <div class="main">
+    <h1>Notes</h1>
+    <a href="signin"><button class="first">SIGN IN</button></a> 
+    <a href="signup"><button>SIGN UP</button></a>
+    </div>
+
+
+    <style>
+        body{
+    font-family: 'Common Pixel', sans-serif;
+    background-color: aliceblue;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    animation: flash 1s;
+}
+
+@keyframes flash {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
+.background{
+    z-index: -1;
+    background-repeat: contain;
+    background-size: cover;
+    background-position: center;
+    position:absolute;
+    height:1000px;
+    width:1000px;
+    margin-top:20%;
+}
+
+
+
+
+.first{
+    transform: translateY(1px);
+}
+
+input::placeholder{
+  font-family: 'Common Pixel', sans-serif;
+}
+
+.main{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top:10%;
+    width:70%;
+    height:500px;
+    display:flex;
+    background-color: white;
+    padding:20px;
+}
+
+button{
+    font-size: 1.2em;
+    font-family: 'Common Pixel', sans-serif;
+    width: 200px;
+    height: 35px;
+    background: aliceblue;
+    border: 1px solid gray;
+    position: relative;
+
+}
+
+
+button:hover {
+    cursor: pointer;
+    background: rgb(197, 228, 255);
+    top:2px;
+  }
+  
+  button:active {
+    top: 8px;
+    box-shadow: 
+      -4px 2px 1px 1px grey,
+      -4px -2px 1px 1px lightgray,
+      4px 0px 1px 1px lightgray; 
+      z-index:1;
+  }
+  
+    button::after {
+    content: '';
+    position: absolute;
+    left: -2.5%;
+    top: 0;
+    width: 105%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -5%;
+    width: 100%;
+    height: 113%;
+    z-index: -1;
+  }
+    </style>
+    
+</body>
+</html>
